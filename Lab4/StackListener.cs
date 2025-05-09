@@ -6,31 +6,32 @@ namespace Lab2
 {
     internal class StackListener
     {
-        private ListView listView;
+        private DataGridView dataGridView;
         private TextBox objCount;
 
-        public StackListener(StackTransportCompany stack, ListView listView, TextBox objCount)
+        public StackListener(StackTransportCompany stack, DataGridView dataGridView, TextBox objCount)
         {
-            this.listView = listView;
+            this.dataGridView = dataGridView;
             this.objCount = objCount;
 
             stack.StackAdded += (TransportCompany company) =>
             {
-                var listItem = new ListViewItem(company.name);
-                listItem.SubItems.Add(company.pricePerKilometer.ToString());
-                listItem.SubItems.Add(company.averageDeliveryTime.ToString());
-                listItem.SubItems.Add(company.yearFounded.ToString());
-                listItem.SubItems.Add(company.transportedMass.ToString());
-                listItem.SubItems.Add(company.rating.ToString());
-                listItem.SubItems.Add(company.phoneNumber.ToString());
-                listItem.SubItems.Add(company.deliveryType.GetDeliveryType());
-                listView.Items.Add(listItem);
+                dataGridView.Rows.Clear();
+                dataGridView.RowCount = 1;
+                dataGridView.Rows[0].Cells[0].Value = company.name;
+                dataGridView.Rows[0].Cells[1].Value = company.pricePerKilometer;
+                dataGridView.Rows[0].Cells[2].Value = company.averageDeliveryTime;
+                dataGridView.Rows[0].Cells[3].Value = company.yearFounded;
+                dataGridView.Rows[0].Cells[4].Value = company.transportedMass;
+                dataGridView.Rows[0].Cells[5].Value = company.rating;
+                dataGridView.Rows[0].Cells[6].Value = company.phoneNumber;
+                dataGridView.Rows[0].Cells[7].Value = company.GetDeliveryInfo();
                 objCount.Text = TransportCompany.countObj.ToString();
             };
             stack.StackRemoved += () =>
             {
-                if (listView.Items.Count > 0)
-                    listView.Items.RemoveAt(listView.Items.Count - 1);
+                if (dataGridView.RowCount > 0)
+                    dataGridView.Rows.RemoveAt(dataGridView.RowCount - 1);
 
                 objCount.Text = TransportCompany.countObj.ToString();
             };

@@ -25,21 +25,10 @@ namespace Lab2
         public Form1()
         {
             InitializeComponent();
+            MessageBox.Show("(название)\n" +
+                "(ваши фамилии) 23ВП1\nВариант 8. Фирма грузоперевозок", "Лабораторная работа 4");
             companies = new StackTransportCompany();
-            stackListener = new StackListener(companies, listView1, objCount);
-        }
-
-        private void InitializeListView()
-        {
-            listView1.Columns.Add("Название");
-            listView1.Columns.Add("Цена за километр");
-            listView1.Columns.Add("Ср. время доставки");
-            listView1.Columns.Add("Год основания");
-            listView1.Columns.Add("Масса");
-            listView1.Columns.Add("Рейтинг");
-            listView1.Columns.Add("Номер телефона");
-            listView1.Columns.Add("Метод доставки");
-            listView1.View = View.Details;
+            stackListener = new StackListener(companies, dataGridView1, objCount);
         }
 
         private void create_Click(object sender, EventArgs e)
@@ -53,6 +42,9 @@ namespace Lab2
                     throw new MyException("Фирма должна иметь номер");
                 if (!Regex.IsMatch(phonenumberInput.Text.Trim(), @"^\d{11}$"))
                     throw new MyException("Номер должен состоять из 11 цифр и не содержать буквы или символы");
+
+                if (deliveryMethod.SelectedIndex == -1)
+                    throw new MyException("Выберите метод доставки");
 
                 string type = deliveryMethod.SelectedItem.ToString();
                 IDeliveryType delivery = null;
@@ -74,7 +66,8 @@ namespace Lab2
                         (int)yearInput.Value,
                         (float)massInput.Value,
                         (float)ratingInput.Value,
-                        phonenumberInput.Text, delivery);
+                        phonenumberInput.Text,
+                        delivery);
                 objCount.Text = TransportCompany.countObj.ToString();
                 companies.AddCompany(firm);
             }
@@ -95,11 +88,6 @@ namespace Lab2
             {
                 MessageBox.Show(ex.Message, "Ошибка");
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            InitializeListView();
         }
     }
 }

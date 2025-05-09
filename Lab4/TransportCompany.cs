@@ -16,7 +16,7 @@ namespace Lab1
     {
         public string GetDeliveryType()
         {
-            return "Доставка по морю";
+            return "По воде";
         }
     }
 
@@ -24,7 +24,7 @@ namespace Lab1
     {
         public string GetDeliveryType()
         {
-            return "Доставка по автодороге";
+            return "По земле";
         }
     }
 
@@ -32,7 +32,7 @@ namespace Lab1
     {
         public string GetDeliveryType()
         {
-            return "Доставка по воздуху";
+            return "По воздуху";
         }
     }
 
@@ -100,7 +100,7 @@ namespace Lab1
         IDeliveryType deliveryType) : base(name, pricePerKilometer, averageDeliveryTime, yearFounded, transportedMass, rating, phoneNumber, deliveryType) { }
         public override string GetDeliveryInfo()
         {
-            return base.GetDeliveryInfo() + "(экспресс)";
+            return base.GetDeliveryInfo();
         }
 
     }
