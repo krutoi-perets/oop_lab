@@ -177,7 +177,7 @@ namespace Lab2
 
             objCount.Text = TransportCompany.countObj.ToString();
 
-            MessageBox.Show("Генерация и замеры завершены!");
+            MessageBox.Show(results, "Результаты тестирования", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
