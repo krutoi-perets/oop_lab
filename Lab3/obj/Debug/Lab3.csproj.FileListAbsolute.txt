@@ -1,0 +1,10 @@
+C:\Users\Влад\Desktop\На продажу\Lab3\bin\Debug\Lab1.exe.config
+C:\Users\Влад\Desktop\На продажу\Lab3\bin\Debug\Lab1.exe
+C:\Users\Влад\Desktop\На продажу\Lab3\bin\Debug\Lab1.pdb
+C:\Users\Влад\Desktop\На продажу\Lab3\obj\Debug\Lab3.csproj.AssemblyReference.cache
+C:\Users\Влад\Desktop\На продажу\Lab3\obj\Debug\Lab2.Form1.resources
+C:\Users\Влад\Desktop\На продажу\Lab3\obj\Debug\Lab1.Properties.Resources.resources
+C:\Users\Влад\Desktop\На продажу\Lab3\obj\Debug\Lab3.csproj.GenerateResource.cache
+C:\Users\Влад\Desktop\На продажу\Lab3\obj\Debug\Lab3.csproj.CoreCompileInputs.cache
+C:\Users\Влад\Desktop\На продажу\Lab3\obj\Debug\Lab1.exe
+C:\Users\Влад\Desktop\На продажу\Lab3\obj\Debug\Lab1.pdb
