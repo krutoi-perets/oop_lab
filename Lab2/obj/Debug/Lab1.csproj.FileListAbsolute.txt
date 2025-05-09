@@ -38,3 +38,13 @@ C:\Users\Олег\Desktop\Заказ_Мерик\Lab2\obj\Debug\Lab1.pdb
 C:\Users\Олег\Desktop\Заказ_Мерик\Lab2\bin\Debug\Lab1.exe.config
 C:\Users\Олег\Desktop\Заказ_Мерик\Lab2\bin\Debug\Lab1.exe
 C:\Users\Олег\Desktop\Заказ_Мерик\Lab2\bin\Debug\Lab1.pdb
+C:\Users\Влад\Desktop\На продажу\Lab2\bin\Debug\Lab1.exe.config
+C:\Users\Влад\Desktop\На продажу\Lab2\bin\Debug\Lab1.exe
+C:\Users\Влад\Desktop\На продажу\Lab2\bin\Debug\Lab1.pdb
+C:\Users\Влад\Desktop\На продажу\Lab2\obj\Debug\Lab1.csproj.AssemblyReference.cache
+C:\Users\Влад\Desktop\На продажу\Lab2\obj\Debug\Lab2.Form1.resources
+C:\Users\Влад\Desktop\На продажу\Lab2\obj\Debug\Lab1.Properties.Resources.resources
+C:\Users\Влад\Desktop\На продажу\Lab2\obj\Debug\Lab1.csproj.GenerateResource.cache
+C:\Users\Влад\Desktop\На продажу\Lab2\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
+C:\Users\Влад\Desktop\На продажу\Lab2\obj\Debug\Lab1.exe
+C:\Users\Влад\Desktop\На продажу\Lab2\obj\Debug\Lab1.pdb
