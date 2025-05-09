@@ -16,7 +16,7 @@ namespace Lab1
     {
         public string GetDeliveryType()
         {
-            return "Доставка по морю";
+            return "По воде";
         }
     }
 
@@ -24,7 +24,7 @@ namespace Lab1
     {
         public string GetDeliveryType()
         {
-            return "Доставка по автодороге";
+            return "По земле";
         }
     }
 
@@ -32,7 +32,7 @@ namespace Lab1
     {
         public string GetDeliveryType()
         {
-            return "Доставка по воздуху";
+            return "По воздуху";
         }
     }
 
@@ -52,7 +52,10 @@ namespace Lab1
             return (float)Math.Round(company.transportedMass / company.averageDeliveryTime, 2);
         }
 
-        public string Description() => "По массе и времени";
+        public string Description()
+        {
+            return "По массе и времени";
+        }
     }
     public class AgePriceEfficiency : IEfficiencyStrategy
     {
@@ -67,7 +70,10 @@ namespace Lab1
             return (float)Math.Round(age / (float)company.pricePerKilometer, 2);
         }
 
-        public string Description() => "По возрасту и цене";
+        public string Description()
+        {
+            return "По возрасту и цене";
+        }
     }
 
     public class BalancedEfficiency : IEfficiencyStrategy
@@ -80,7 +86,10 @@ namespace Lab1
             return (float)Math.Round(0.6f * massEff + 0.4f * priceEff, 2);
         }
 
-        public string Description() => "Сбалансированная";
+        public string Description()
+        {
+            return "Сбалансированная";
+        }
     }
 
     public abstract class TransportCompany
@@ -111,6 +120,7 @@ namespace Lab1
             phoneNumber = "";
             countObj++;
             deliveryType = null;
+            efficiencyStrategy = null;
         }
 
         public TransportCompany(string name) : this()
@@ -132,7 +142,7 @@ namespace Lab1
             this.rating = rating;
             this.phoneNumber = phoneNumber;
             this.deliveryType = deliveryType;
-            efficiencyStrategy = new BalancedEfficiency();
+            this.efficiencyStrategy = new BalancedEfficiency();
         }
 
         public virtual string GetDeliveryInfo()
@@ -155,13 +165,11 @@ namespace Lab1
         float rating,
         string phoneNumber,
         IDeliveryType deliveryType) : base(name, pricePerKilometer, averageDeliveryTime, yearFounded, transportedMass, rating, phoneNumber, deliveryType) { }
+        
         public override string GetDeliveryInfo()
         {
-            return base.GetDeliveryInfo() + "(экспресс)";
+            return base.GetDeliveryInfo();
         }
-
-
-
     }
 
 }
