@@ -71,10 +71,10 @@ namespace Lab1
                             case "По земле":
                                 method = new RoadDelivery().GetDeliveryType();
                                 break;
-                            case "Ship":
+                            case "По воде":
                                 method = new SeaDelivery().GetDeliveryType();
                                 break;
-                            case "Air":
+                            case "По воздуху":
                                 method = new AirDelivery().GetDeliveryType();
                                 break;
                             default:
