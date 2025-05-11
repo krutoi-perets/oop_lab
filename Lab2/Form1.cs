@@ -25,8 +25,8 @@ namespace Lab2
         public Form1()
         {
             InitializeComponent();
-            MessageBox.Show("(название)\n" +
-                "(ваши фамилии) 23ВП1\nВариант 8. Фирма грузоперевозок", "Лабораторная работа 2");
+            MessageBox.Show("Использование коллекций. Делегаты и события\n" +
+                "Рейимов М. 23ВП1\nВариант 8. Фирма грузоперевозок", "Лабораторная работа 2");
             companies = new StackTransportCompany();
             stackListener = new StackListener(companies, dataGridView1, objCount);
         }
